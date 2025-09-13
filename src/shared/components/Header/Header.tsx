@@ -1,11 +1,19 @@
+import { useState } from "react";
+import styles from "./header.module.scss";
+
 export default function Header() {
+  const [isHamburgerActivated, setIsHamburgerActivated] = useState(false);
   return (
-    <header>
-      <figure>
-        <img src="#" alt="Profile" />
-      </figure>
-      <h1>Moneygement</h1>
-      <button>| | |</button>
+    <header className={styles.header}>
+      <h1 className={styles.header__title}>Moneygement</h1>
+      <button
+        className={`${styles.header__hamburger} ${isHamburgerActivated ? styles.header__hamburger__activated : ""}`}
+        onClick={() => setIsHamburgerActivated(!isHamburgerActivated)}
+      >
+        <div className={styles.header__hamburger__line}></div>
+        <div className={styles.header__hamburger__line}></div>
+        <div className={styles.header__hamburger__line}></div>
+      </button>
     </header>
   );
 }
