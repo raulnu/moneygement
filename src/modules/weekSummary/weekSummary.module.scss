@@ -1,0 +1,12 @@
+@use "../../styles/settings/layout";
+
+.week_summary {
+  @include layout.flex-column;
+  @include layout.content-container(-4.8rem);
+    &__last_days {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+}

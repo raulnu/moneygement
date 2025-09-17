@@ -1,27 +1,26 @@
-:root {
-  --color-primary-dark:#ad6800;
-  --color-primary-plain: #faad14;
-  --color-primary-light: #ffd666;
+$color-primary-dark: #006d75;
+$color-primary-plain: #13c2c2;
+$color-primary-light: #5cdbd3;
 
-  --color-secondary-dark: #ad2102;
-  --color-secondary-plain: #fa541c;
-  --color-secondary-light: #ff9c6e;
+$color-secondary-dark:#ad6800;
+$color-secondary-plain: #faad14;
+$color-secondary-light: #ffd666;
 
-  --color-auxiliar-dark: #006d75;
-  --color-auxiliar-plain: #13c2c2;
-  --color-auxiliar-light: #5cdbd3;
+$color-auxiliar-dark: #d9d9d9;
+$color-auxiliar-plain: #f5f5f5;
+$color-auxiliar-light: #ffffff;
 
-  --color-success-dark: #5b8c00;
-  --color-success-plain: #a0d911;
-  --color-success-light: #d3f261;
+$color-success-dark: #5b8c00;
+$color-success-plain: #a0d911;
+$color-success-light: #d3f261;
 
-  --color-error-dark: #a8071a;
-  --color-error-plain: #f5222d;
-  --color-error-light: #ff7875;
+$color-error-dark: #a8071a;
+$color-error-plain: #f5222d;
+$color-error-light: #ff7875;
 
-  --color-background-light: #fafafa;
-  --color-background-dark: #434343;
+$color-background-light: #fafafa;
+$color-background-dark: #434343;
 
-  --color-font-light: #434343;
-  --color-font-dark: #f5f5f5;
-}
+$color-font-light: #434343;
+$color-font-dark: #f5f5f5;
+

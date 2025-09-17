@@ -1,39 +1,32 @@
 import Footer from "../../../shared/components/Footer/Footer";
 import Header from "../../../shared/components/Header/Header";
-import "./page.module.scss";
+import WeekSummary from "../../weekSummary/WeekSummary";
+import styles from "./page.module.scss";
 
 function Dashboard() {
   return (
     <>
       <Header />
-      <main>
-        <h2>Dashboard</h2>
-        <section>
-          <h3>Account Balance</h3>
-          <p>2500,35€</p>
+      <main className={`${styles.dashboard}`}>
+        <section className={`${styles.dashboard__account_balance}`}>
+          <h2 className={`${styles.title}`}>Account Balance</h2>
+          <p className={`${styles.amount}`}>2500,35€</p>
         </section>
-        <section>
-          <h3>This Month</h3>
-          <div>
-            <h4>Spent Budget</h4>
-            <p>500,50€</p>
-          </div>
-          <div>
-            <h4>Remaining Budget</h4>
-            <p>499,50</p>
+        <section className={`${styles.dashboard__this_month}`}>
+          <h2 className={`${styles.title}`}>This Month</h2>
+          <div className={`${styles.dashboard__this_month__budget}`}>
+            <div>
+              <h3 className={`${styles.title}`}>Spent Budget</h3>
+              <p className={`${styles.amount}`}>500,50€</p>
+            </div>
+            <div>
+              <h3 className={`${styles.title}`}>Remaining Budget</h3>
+              <p className={`${styles.amount}`}>499,50</p>
+            </div>
           </div>
         </section>
-        <section>
-          <h3>This week</h3>
-          <img src="#" alt="Week expenses graphic" />
-          <div>
-            <h4>Yesterday</h4>
-            <p>250€</p>
-          </div>
-          <div>
-            <h4>Today</h4>
-            <p>300€</p>
-          </div>
+        <section className={`${styles.dashboard__week_summary}`}>
+          <WeekSummary />
         </section>
       </main>
       <Footer />

@@ -1,0 +1,16 @@
+@use "../../../styles/settings/colors";
+@use "../../../styles/settings/layout";
+
+.footer{
+  @include layout.flex-column;
+  @include layout.border-radius-top;
+  padding: 1.2rem 0;
+  width: 100%;
+  background-color: colors.$color-background-dark;
+  color: colors.$color-font-dark;
+  position: absolute;
+  bottom: 0;
+  * {
+    margin: 0.4rem;
+  }
+}
