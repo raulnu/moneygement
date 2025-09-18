@@ -1,0 +1,58 @@
+@use "../../../styles/tools/container";
+@use "../../../styles/settings/colors";
+@use "../../../styles/settings/typography";
+
+.dashboard {
+  @extend %flex-column;
+
+  &__account-balance {
+    @extend %flex-column;
+    padding-bottom: 1.6rem;
+  }
+
+  &__this-month {
+    @extend %flex-column;
+    @extend %border-radius-top;
+
+    width: 100%;
+    background-color: colors.$color-primary-plain;
+    padding-bottom: 20rem;
+
+  }
+
+  &__budget {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    * {
+        @extend %flex-column;
+    }
+  }
+
+  &__week-summary {
+    @extend %flex-column;
+    @extend %border-radius-top;
+
+    position: relative;
+    background-color: colors.$color-secondary-light;
+    width: 100%;
+    padding-bottom: 36rem;
+    margin-top: -12rem;
+  }
+
+}
+
+.title {
+  font-size: typography.$font-sm;
+  font-weight: 500;
+  margin-top: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.amount {
+  font-size: typography.$font-l;
+  font-weight: 600;
+  margin-top: 0.2rem;
+  margin-bottom: 0;
+}

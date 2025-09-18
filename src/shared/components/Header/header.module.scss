@@ -1,0 +1,45 @@
+@use "../../../styles/settings/colors";
+@use "../../../styles/settings/typography";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  background-color: colors.$color-background-light;
+  padding-bottom: 0;
+  &__title {
+    font-size: typography.$font-xl;
+  }
+
+  &__hamburger{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    gap: 6px;
+    border: none;
+
+    &--activated {
+      div:first-child {
+        transform: rotate(45deg);
+      }
+      div:nth-child(2) {
+        opacity: 0;
+      }
+      div:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &__hamburger-line {
+    background-color: colors.$color-font-light;
+    height: 3.5px;
+    width: 100%;
+    transition: all 300ms;
+    transform-origin: left;
+  }
+}
