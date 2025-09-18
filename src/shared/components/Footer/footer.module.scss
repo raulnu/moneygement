@@ -1,9 +1,9 @@
 @use "../../../styles/settings/colors";
-@use "../../../styles/settings/layout";
+@use "../../../styles/tools/container";
 
 .footer{
-  @include layout.flex-column;
-  @include layout.border-radius-top;
+  @extend %flex-column;
+  @extend %border-radius-top;
   padding: 1.2rem 0;
   width: 100%;
   background-color: colors.$color-background-dark;

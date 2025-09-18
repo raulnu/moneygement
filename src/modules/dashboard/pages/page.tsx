@@ -8,13 +8,13 @@ function Dashboard() {
     <>
       <Header />
       <main className={`${styles.dashboard}`}>
-        <section className={`${styles.dashboard__account_balance}`}>
+        <section className={`${styles["dashboard__account-balance"]}`}>
           <h2 className={`${styles.title}`}>Account Balance</h2>
           <p className={`${styles.amount}`}>2500,35€</p>
         </section>
-        <section className={`${styles.dashboard__this_month}`}>
+        <section className={`${styles["dashboard__this-month"]}`}>
           <h2 className={`${styles.title}`}>This Month</h2>
-          <div className={`${styles.dashboard__this_month__budget}`}>
+          <div className={`${styles.dashboard__budget}`}>
             <div>
               <h3 className={`${styles.title}`}>Spent Budget</h3>
               <p className={`${styles.amount}`}>500,50€</p>
@@ -25,7 +25,7 @@ function Dashboard() {
             </div>
           </div>
         </section>
-        <section className={`${styles.dashboard__week_summary}`}>
+        <section className={`${styles["dashboard__week-summary"]}`}>
           <WeekSummary />
         </section>
       </main>

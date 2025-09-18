@@ -1,0 +1,25 @@
+@use "../settings/colors";
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+%border-radius-top {
+  border-top-left-radius: 2.4rem;
+  border-top-right-radius: 2.4rem;
+}
+
+@mixin content-container ($top: 0, $background-color: colors.$color-background-light){
+  z-index: 1;
+  position: absolute;
+  top: $top;
+  width: 95%;
+  padding: 1.2rem 0;
+  background-color: $background-color;
+  border-top-left-radius: 2.4rem;
+  border-top-right-radius: 2.4rem;
+  border-bottom-left-radius: 2.4rem;
+  border-bottom-right-radius: 2.4rem;
+}

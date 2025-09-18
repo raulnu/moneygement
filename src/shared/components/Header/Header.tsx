@@ -7,12 +7,12 @@ export default function Header() {
     <header className={styles.header}>
       <h1 className={styles.header__title}>Moneygement</h1>
       <button
-        className={`${styles.header__hamburger} ${isHamburgerActivated ? styles.header__hamburger__activated : ""}`}
+        className={`${styles.header__hamburger} ${isHamburgerActivated ? styles["header__hamburger--activated"] : ""}`}
         onClick={() => setIsHamburgerActivated(!isHamburgerActivated)}
       >
-        <div className={styles.header__hamburger__line}></div>
-        <div className={styles.header__hamburger__line}></div>
-        <div className={styles.header__hamburger__line}></div>
+        <div className={styles["header__hamburger-line"]}></div>
+        <div className={styles["header__hamburger-line"]}></div>
+        <div className={styles["header__hamburger-line"]}></div>
       </button>
     </header>
   );

@@ -1,37 +1,38 @@
-@use "../../../styles/settings/layout";
+@use "../../../styles/tools/container";
 @use "../../../styles/settings/colors";
 @use "../../../styles/settings/typography";
 
 .dashboard {
-  @include layout.flex-column;
+  @extend %flex-column;
 
-  &__account_balance {
-    @include layout.flex-column;
+  &__account-balance {
+    @extend %flex-column;
     padding-bottom: 1.6rem;
   }
 
-  &__this_month {
-    @include layout.flex-column;
-    @include layout.border-radius-top;
+  &__this-month {
+    @extend %flex-column;
+    @extend %border-radius-top;
 
     width: 100%;
     background-color: colors.$color-primary-plain;
     padding-bottom: 20rem;
 
-    &__budget {
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
+  }
 
-      * {
-          @include layout.flex-column;
-      }
+  &__budget {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    * {
+        @extend %flex-column;
     }
   }
 
-  &__week_summary {
-    @include layout.flex-column;
-    @include layout.border-radius-top;
+  &__week-summary {
+    @extend %flex-column;
+    @extend %border-radius-top;
 
     position: relative;
     background-color: colors.$color-secondary-light;
