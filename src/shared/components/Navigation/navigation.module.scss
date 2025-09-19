@@ -1,0 +1,39 @@
+@use "../../../styles/tools/container";
+@use "../../../styles/settings/colors";
+@use "../../../styles/settings/layout";
+@use "../../../styles/settings/typography";
+
+.navigator {
+  @extend %flex-column;
+
+  width: 100%;
+  padding: layout.$layout-xxl 0;
+
+  position: absolute;
+  top: -500px;
+  z-index: 2;
+
+  background-color: colors.$color-background-light;
+  border-bottom-left-radius: 2.4rem;
+  border-bottom-right-radius: 2.4rem;
+  opacity: 0.95;
+
+  transition: all 300ms;
+
+  * {
+    font-size: typography.$font-l;
+    font-weight: 600;
+    color: colors.$color-font-light;
+    text-decoration: none;
+    margin: layout.$layout-xl;
+  }
+}
+
+.navigator--active {
+  top: 59.9px;
+}
+
+.navlink--active {
+  cursor: not-allowed;
+  font-weight: 800;
+}
