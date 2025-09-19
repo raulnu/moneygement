@@ -6,23 +6,17 @@ import Expenses from "./modules/expenses/Expenses.tsx";
 import Categories from "./modules/categories/Categories.tsx";
 import Statistics from "./modules/statistics/Statistics.tsx";
 import Settings from "./modules/settings/Settings.tsx";
+import NotFound from "./modules/notFound/NotFound.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Dashboard />} />
-    </Routes>
-    <Routes>
       <Route path="/expenses" element={<Expenses />} />
-    </Routes>
-    <Routes>
       <Route path="/categories" element={<Categories />} />
-    </Routes>
-    <Routes>
       <Route path="/statistics" element={<Statistics />} />
-    </Routes>
-    <Routes>
       <Route path="/settings" element={<Settings />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   </BrowserRouter>,
 );
