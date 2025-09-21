@@ -1,23 +1,26 @@
 import { useState } from "react";
 import styles from "./header.module.scss";
 import Navigation from "../Navigation/Navigation";
+import HamburgerButton from "../ui/atoms/hamburgerButton/HamburgerButton";
 
 export default function Header() {
-  const [isHamburgerActive, setIsHamburgerActivated] = useState(false);
+  const [isHamburgerActive, setIsHamburgerActive] = useState(false);
+  const toggleHamburger = () => {
+    setIsHamburgerActive(!isHamburgerActive);
+  };
   return (
     <>
       <header className={styles.header}>
         <h1 className={styles.header__title}>Moneygement</h1>
-        <button
-          className={`${styles.header__hamburger} ${isHamburgerActive ? styles["header__hamburger--activated"] : ""}`}
-          onClick={() => setIsHamburgerActivated(!isHamburgerActive)}
-        >
-          <div className={styles["header__hamburger-line"]}></div>
-          <div className={styles["header__hamburger-line"]}></div>
-          <div className={styles["header__hamburger-line"]}></div>
-        </button>
+        <HamburgerButton
+          isHamburgerActive={isHamburgerActive}
+          toggleHamburger={toggleHamburger}
+        />
       </header>
-      <Navigation isHamburgerActive={isHamburgerActive} />
+      <Navigation
+        isHamburgerActive={isHamburgerActive}
+        toggleHamburger={toggleHamburger}
+      />
     </>
   );
 }
