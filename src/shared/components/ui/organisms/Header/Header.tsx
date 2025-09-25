@@ -1,13 +1,11 @@
-import { useState } from "react";
 import styles from "./header.module.scss";
-import Navigation from "../../molecules/Navigation/Navigation";
 import HamburgerButton from "../../atoms/HamburgerButton/HamburgerButton";
+import type { IHeaderProps } from "./header.d";
 
-export default function Header() {
-  const [isHamburgerActive, setIsHamburgerActive] = useState(false);
-  const toggleHamburger = () => {
-    setIsHamburgerActive(!isHamburgerActive);
-  };
+export default function Header({
+  isHamburgerActive,
+  toggleHamburger,
+}: IHeaderProps) {
   return (
     <>
       <header className={styles.header}>
@@ -17,10 +15,6 @@ export default function Header() {
           toggleHamburger={toggleHamburger}
         />
       </header>
-      <Navigation
-        isHamburgerActive={isHamburgerActive}
-        toggleHamburger={toggleHamburger}
-      />
     </>
   );
 }

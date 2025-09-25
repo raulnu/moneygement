@@ -1,12 +1,12 @@
 import { NavLink } from "react-router";
 import styles from "./navigation.module.scss";
-import type { NavigationProps } from "./navigation.d";
+import type { INavigationProps } from "./navigation.d";
 import { componentRoutes, type IRoute } from "../../../../constants/routes";
 
 export default function Navigation({
   isHamburgerActive,
   toggleHamburger,
-}: NavigationProps) {
+}: INavigationProps) {
   return (
     <nav
       className={`${styles.navigator} ${isHamburgerActive ? styles["navigator--active"] : ""}`}
