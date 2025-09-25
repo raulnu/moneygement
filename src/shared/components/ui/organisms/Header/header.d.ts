@@ -1,4 +1,4 @@
-export interface INavigationProps {
+export interface IHeaderProps {
   isHamburgerActive: boolean;
   toggleHamburger: () => void;
 }
