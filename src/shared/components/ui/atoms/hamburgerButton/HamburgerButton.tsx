@@ -1,5 +1,5 @@
 import styles from "./hamburgerButton.module.scss";
-import type { HamburgerButtonProps } from "./hamburgerButton.d";
+import type { HamburgerButtonProps } from "./hamburgerButton";
 import type { JSX } from "react/jsx-dev-runtime";
 
 export default function HamburgerButton({

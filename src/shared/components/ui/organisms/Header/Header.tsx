@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./header.module.scss";
-import Navigation from "../Navigation/Navigation";
-import HamburgerButton from "../ui/atoms/hamburgerButton/HamburgerButton";
+import Navigation from "../../molecules/Navigation/Navigation";
+import HamburgerButton from "../../atoms/HamburgerButton/HamburgerButton";
 
 export default function Header() {
   const [isHamburgerActive, setIsHamburgerActive] = useState(false);

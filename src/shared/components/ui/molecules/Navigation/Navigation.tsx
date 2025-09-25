@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
 import styles from "./navigation.module.scss";
 import type { NavigationProps } from "./navigation.d";
-import { componentRoutes, type IRoute } from "../../constants/routes";
+import { componentRoutes, type IRoute } from "../../../../constants/routes";
 
 export default function Navigation({
   isHamburgerActive,

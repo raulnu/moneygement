@@ -1,7 +1,7 @@
-@use "../../../styles/tools/container";
-@use "../../../styles/settings/colors";
-@use "../../../styles/settings/layout";
-@use "../../../styles/settings/typography";
+@use "../../../../../styles/tools/container";
+@use "../../../../../styles/settings/colors";
+@use "../../../../../styles/settings/layout";
+@use "../../../../../styles/settings/typography";
 
 .navigator {
   @extend %flex-column;

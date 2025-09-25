@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
+import Header from "../../organisms/Header/Header";
+import Footer from "../../organisms/Footer/Footer";
 import "./layout.module.scss";
 
 interface LayoutProps {
